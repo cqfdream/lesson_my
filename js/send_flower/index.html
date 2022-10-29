@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>代码设计模式之代理模式</h1>
+    <script>
+        //?张
+        //document.write('张')
+        //对象字面量 描述功能 表现力
+        //对象由属性和方法构成
+        //动作
+        let cqf={
+            name:'陈琦锋',
+            age:21,
+            hometown:'赣州',
+           // hasgirlfriend:false 
+            isSingle:false,
+         
+            dream:'好好生活',
+            //形参o
+            sendFlower(o){
+                o.reciveFlower(this)
+
+            }
+        }
+        let xm={
+            xq:50,
+            name:'小美',
+            age:18,
+            room:'201',
+            hometown:'赣州',
+            reciveFlower(o){
+                
+                console.log(`${this.name}收到了${o.name}送的花`)
+                // if(this.xq >=90){
+                //     console.log('万达走一波')
+                // }else{
+                //     console.log('倒盆冷水')
+                // }
+                setTimeout(function(){
+                    xm.xq=95;
+                    xm.reciveFlower(o)
+
+                },10000)
+
+            }
+
+        }
+
+        //代理模式
+        let xh={
+            name:'小红',
+            age:19,
+            room:'201',
+            hometown:'赣州',
+            //接口  当不同的对象具有相同的方法时，可以互换使用
+            reciveFlower(o){
+            //  if (o.name=='陈琦锋'){
+            //     console.log('让我们在一起吧...')
+            //  }else
+            //{
+            //    xm.reciveFlower(o)
+            //}
+                
+            }
+
+        }
+        cqf.sendFlower(xh)
+    </script>
+</body>
+</html>
