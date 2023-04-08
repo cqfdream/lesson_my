@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - ping www.baidu.com  顶级域名
     14.215.177.38  dns 域名解析过程
     tcp/ip 协议
@@ -12,3 +13,19 @@
 - www.baidu.con  百度在顶级域名商 www.baidu.com => 14.215.177.38
     DNS分布式数据库
     key:value
+=======
+- ping www.baidu.com  顶级域名
+    14.215.177.38  dns 域名解析过程
+    tcp/ip 协议
+    IP  寻址 相当于一个门牌号
+    IPv4  二进制32位  十进制表达  例如192.168.31.175  每一位都在0~255之间 二进制
+        用点隔开 每一位都是8位二进制数
+    物联网的世界 入网设备数量激增
+    IPv6  扩容   128位  16进制表达  例如2001:0DB8:0000:0023:0008:0800:200C:417A
+
+- 127.0.0.1  localhost（本地主机）  方便理解
+    域名 domain  search  DNS
+- www.baidu.con  百度在顶级域名商 www.baidu.com => 14.215.177.38
+    DNS分布式数据库
+    key:value
+>>>>>>> 34a2f95 (aa)

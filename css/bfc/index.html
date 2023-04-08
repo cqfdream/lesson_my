@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .container{
+            /* display: inline-block;开启一个新的BFC，但不满一行 */
+            /* overflow: hidden;跟flex 一样，有开启一个新的BFC的能力 */
+            /* background: #000; */
+            /* position:fixed; */
+            /* height: 300px; */
+            /* display: flex; */
+            /* float: left; */
+        /* }  */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            margin: 10px;/*?*/
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* float: left; */
+        }
+        .box:last-child{
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- body是最大的bfc -->
+    <!-- container的高度由子元素撑起来 -->
+    <div class="container">
+        <!-- 没有开启新的bfc -->
+        <div class="box"></div>
+        <div style="overflow:hidden;">
+            <div class="box"></div>
+        </div>
+</body>
+</html>

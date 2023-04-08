@@ -1,0 +1,16 @@
+<view class="container">
+<!-- 地图组件   纬度  经度        -->
+<map class="map" 
+  latitude="{{latitude}}" 
+  longitude="{{longitude}}"
+  scale="16"
+  show-location="true"
+  markers="{{markers}}"
+>
+  <cover-view class="top-tips">
+      <cover-image class="top-icon" src="/images/top-tip.png">
+      </cover-image>
+      <cover-view class="top-text">青桔单车</cover-view>
+  </cover-view>
+</map>
+</view>

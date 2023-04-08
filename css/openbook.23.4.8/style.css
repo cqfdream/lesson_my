@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font: 100%/1.25 Arial, Helvetica, sans-serif;
+  color: #fff;
+  perspective: 1000px;
+  background: #444;
+  background-image: linear-gradient(to bottom, #444, #999);
+}
+.p3d {
+  transform-style: preserve-3d;
+}
+.book {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  user-select: none;
+  transform: rotateX(60deg);
+}
+.book .page {
+  width: 300px;
+  height: 300px;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: 2em;
+}
+.book .front {
+  background-color: #d93e2b;
+}
+.book .back {
+  background-color: #fff;
+}
+.book .front-cover {
+  cursor: move;
+  transform-origin: 0 50%;
+}
+.book .front-cover .back {
+  background-image: url("https://preview.qiantucdn.com/58pic/35/01/38/55A58PICaUy8sV83Dd78m_PIC2018.jpg%21w1024_new_3072");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(3px);
+}
+.book .back-cover .back {
+  transform: translateZ(-3px);
+}
+.book .flip {
+  transform: rotateY(180deg);
+}
+.book .shadow,
+.book .card {
+  width: 196px;
+  height: 132px;
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  transform-origin: 0 100%;
+}
+.book .card {
+  background: url("https://preview.qiantucdn.com/58pic/35/01/38/55A58PICaUy8sV83Dd78m_PIC2018.jpg%21w1024_new_3072");
+  background-size: cover;
+}
+.book .shadow {
+  background-color: rgba(0,0,0,0.5);
+}
